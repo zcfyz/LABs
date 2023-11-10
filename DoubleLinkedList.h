@@ -165,6 +165,14 @@ public:
         }
     }
 
+    void set(int index, const T& value) {
+        Node* current = head;
+        for (int i = 0; i < index; i++) {
+            current = current->next;
+        }
+        current->data = value;
+    }
+
     void display() const {
         Node* curr = head;
         while (curr) {
